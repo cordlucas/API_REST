@@ -1,7 +1,12 @@
-FROM mysql:5.7
+FROM python:3.12-alpine
 
-COPY ./db/ /docker-entrypoint-initdb.d/
+WORKDIR /api
 
-WORKDIR /db
+COPY requirements.txt .
 
-RUN 
+RUN pip3 install --upgrade pip
+RUN pip3 install -r requirements.txt
+
+COPY . .
+
+CMD [ "python", "app.py" ]

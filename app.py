@@ -2,10 +2,10 @@ import mysql.connector
 from flask import Flask, make_response, jsonify, request
 
 mydb = mysql.connector.connect(
-    host='localhost',
-    user='Drade',
-    password='MainPassword',
-    database='Drade'
+    host='db',
+    user='root',
+    password='root',
+    database='estoque'
 )
 
 app = Flask(__name__)
