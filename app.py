@@ -2,10 +2,10 @@ import mysql.connector
 from flask import Flask, make_response, jsonify, request
 
 mydb = mysql.connector.connect(
-    host='127.0.0.1',
+    host='db',
     user='root',
     password='root',
-    database='estoque',
+    database='drade',
     port='3306'
 )
 
@@ -16,7 +16,7 @@ app.config['JSON_SORT_KEYS'] = False
 @app.route('/Estoque', methods=['GET'])
 def get_estoque():
 
-    my_cursor = mydb.cursor()  
+    my_cursor = mydb.cursor()
     my_cursor.execute('SELECT * FROM estoque')
     produtos = my_cursor.fetchall()
 

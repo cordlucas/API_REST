@@ -1,7 +1,7 @@
-DROP DATABASE IF EXISTS Drade;
-CREATE DATABASE Drade;
+DROP DATABASE IF EXISTS drade;
+CREATE DATABASE drade;
 
-USE Drade;
+USE drade;
 
 CREATE TABLE estoque (
     id integer not null auto_increment,
@@ -9,7 +9,6 @@ CREATE TABLE estoque (
     produto varchar(100),
     PRIMARY KEY (id)
 );
-
 SET character_set_client = utf8;
 SET character_set_connection = utf8;
 SET character_set_results = utf8;
