@@ -2,10 +2,10 @@ import mysql.connector
 from flask import Flask, make_response, jsonify, request
 
 mydb = mysql.connector.connect(
-    host='db',
+    host='db', #usar variaveis vindas do docker-compose
     user='root',
     password='root',
-    database='drade',
+    database='produtos',
     port='3306'
 )
 
