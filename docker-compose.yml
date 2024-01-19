@@ -5,12 +5,12 @@
       build:
         context: "."
         dockerfile: ./Dockerfile
-      # environment:
-      #   HOST: db #usar essas variaveis no app.py
-      #   USER: root,
-      #   PASSWORD: root
-      #   DATABASE: estoque
-      #   PORT: 3306
+      environment:
+        HOST: db #usar essas variaveis no app.py
+        USER: root
+        PASSWORD: root
+        DATABASE: estoque
+        PORT: 3306
       links:
         - db
       depends_on:

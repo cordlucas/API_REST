@@ -1,12 +1,13 @@
 import mysql.connector
+import os
 from flask import Flask, make_response, jsonify, request
 
 mydb = mysql.connector.connect(
-    host='db', #usar variaveis vindas do docker-compose
-    user='root',
-    password='root',
-    database='produtos',
-    port='3306'
+    host= os.environ['HOST'], #usar variaveis vindas do docker-compose
+    user= os.environ['USER'],
+    password= os.environ['PASSWORD'],
+    database= os.environ['DATABASE'],
+    port= os.environ['PORT']
 )
 
 app = Flask(__name__)

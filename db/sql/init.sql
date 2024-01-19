@@ -1,7 +1,7 @@
 DROP DATABASE IF EXISTS produtos;
 CREATE DATABASE produtos;
 
-USE produtos;
+-- USE produtos;
 
 CREATE TABLE estoque (
     id integer not null auto_increment,
