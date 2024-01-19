@@ -17,7 +17,7 @@
         - db
       restart: on-failure
       ports:
-        - 6000:5000
+        - 6000:6000
 
     db:
       container_name: db-estoque
